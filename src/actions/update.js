@@ -8,6 +8,11 @@
 *
 */
 
-const update = () => {};
-
+const update = (elmt,newelmt) => {
+                const idtoremove = elmt.id;
+                const   tmp=getState();
+                let newbuf = tmp.filter(elmt => elmt.id !== idtoremove);
+                newbuf
+                setState([...newbuf,{id:idtoremove,newelmt}])
+                };
 export default update;

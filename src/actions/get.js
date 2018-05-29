@@ -1,3 +1,4 @@
+import { getState } from "../store";
 /* FIXME:
 *
 * export a function that gets a single element from the store.
@@ -7,6 +8,9 @@
 *
 */
 
-const get = () => {};
+const get = (id) => {
+    const state = getState();
+    return state.indexOf(id);
+   };
 
 export default get;

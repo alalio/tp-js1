@@ -1,3 +1,5 @@
+import {setState,getState} from "../store";
+
 /* FIXME:
 *
 * export a function that adds a new element to the store.
@@ -8,7 +10,19 @@
 * - you must use the functions from "../store"
 *
 */
+let len = 6
+const add = (elmt) => {
+         let tmp = getState();
+         if(typeof(elmt) === "string")
+         {
+            setState([...tmp,{id: ++len,url : elmt}]);
+         }
+         else
+         { 
+            setState([...tmp,...elmt]);
+         }
 
-const add = () => {};
+
+};
 
 export default add;
